@@ -12,7 +12,6 @@
         <module>dcy-common-spring-boot-starter</module>
         <module>dcy-db-spring-boot-starter</module>
         <module>dcy-spring-cloud-alibaba-dependencies</module>
-        <module>dcy-db-base-spring-boot-starter</module>
         <module>dcy-spring-dubbo-starter</module>
         <!--<module>dcy-spring-cloud-swagger-starter</module>-->
     </modules>

@@ -1,4 +1,4 @@
-package com.dcy.basedb.binding;
+package com.dcy.db.binding;
 
 import java.lang.annotation.*;
 

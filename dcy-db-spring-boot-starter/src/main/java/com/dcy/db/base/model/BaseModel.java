@@ -1,4 +1,4 @@
-package com.dcy.basedb.model;
+package com.dcy.db.base.model;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
