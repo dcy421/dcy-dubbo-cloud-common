@@ -39,7 +39,7 @@ public class WebLogAspect {
      * ..表示包及子包 该方法代表controller层的所有方法
      * Pointcut定义时，还可以使用&&、||、! 这三个运算
      */
-    @Pointcut("execution(public * com.dcy.*.provider.controller..*(..)) || execution(public * com.dcy.web.base.controller..*(..))")
+    @Pointcut("execution(public * com.dcy.service.*.controller..*(..))")
     public void controllerMethod() {
     }
 

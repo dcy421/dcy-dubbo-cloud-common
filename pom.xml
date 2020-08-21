@@ -13,6 +13,7 @@
         <module>dcy-db-spring-boot-starter</module>
         <module>dcy-spring-cloud-alibaba-dependencies</module>
         <module>dcy-spring-dubbo-starter</module>
+        <module>dcy-redis-spring-boot-starter</module>
         <!--<module>dcy-spring-cloud-swagger-starter</module>-->
     </modules>
 
@@ -33,7 +34,7 @@
         <lombok.version>1.18.12</lombok.version>
         <mybatis-plus.version>3.3.2</mybatis-plus.version>
         <log4j.version>1.2.17</log4j.version>
-        <druid-stater.version>1.1.23</druid-stater.version>
+        <redisson.version>3.12.5</redisson.version>
 
         <!--<swagger.version>1.5.23</swagger.version>-->
 
