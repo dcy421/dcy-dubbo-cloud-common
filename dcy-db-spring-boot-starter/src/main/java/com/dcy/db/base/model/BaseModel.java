@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * @Author：dcy
@@ -26,7 +27,7 @@ public class BaseModel extends PageModel implements Serializable {
      * 创建时间
      */
     @TableField(fill = FieldFill.INSERT)
-    private String createDate;
+    private LocalDateTime createDate;
 
     /**
      * 更新者
@@ -38,7 +39,7 @@ public class BaseModel extends PageModel implements Serializable {
      * 更新时间
      */
     @TableField(fill = FieldFill.UPDATE)
-    private String updateDate;
+    private LocalDateTime updateDate;
 
     /**
      * 删除标识

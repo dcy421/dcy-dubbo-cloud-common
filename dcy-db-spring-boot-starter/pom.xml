@@ -37,12 +37,6 @@
             <artifactId>dcy-common-spring-boot-starter</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- db base封装-->
-        <dependency>
-            <groupId>com.dcy</groupId>
-            <artifactId>dcy-db-base-spring-boot-starter</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
 

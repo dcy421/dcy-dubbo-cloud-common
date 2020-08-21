@@ -10,7 +10,7 @@ import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.dcy.basedb.model.PageModel;
+import com.dcy.db.base.model.PageModel;
 import com.dcy.db.base.service.BaseService;
 import com.dcy.db.binding.QueryBuilder;
 
