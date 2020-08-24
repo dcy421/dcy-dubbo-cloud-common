@@ -18,24 +18,27 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
         <!-- Mybatis-Plus stater-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
-
         <!-- common 封装 -->
         <dependency>
             <groupId>com.dcy</groupId>
             <artifactId>dcy-common-spring-boot-starter</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <!-- swagger 注解-->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger.version}</version>
         </dependency>
     </dependencies>
 
