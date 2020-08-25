@@ -15,6 +15,7 @@
         <module>dcy-spring-dubbo-starter</module>
         <module>dcy-redis-spring-boot-starter</module>
         <module>dcy-web-spring-boot-starter</module>
+        <module>dcy-log-spring-boot-starter</module>
     </modules>
 
     <properties>
