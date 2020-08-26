@@ -41,7 +41,7 @@
 
     </properties>
 
-    <!--依赖管理，用于管理spring-cloud的依赖，其中Camden.SR3是版本号-->
+
     <dependencyManagement>
         <dependencies>
             <!-- Spring Boot -->
