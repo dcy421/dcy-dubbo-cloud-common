@@ -1,7 +1,9 @@
 package com.dcy.db.config;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
+import com.dcy.common.constant.Constant;
 import com.dcy.common.context.BaseContextHandler;
+import org.apache.dubbo.rpc.RpcContext;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +19,8 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     @Override
     public void insertFill(MetaObject metaObject) {
-        this.strictInsertFill(metaObject, "createBy", String.class, BaseContextHandler.getUserID());
+//        this.strictInsertFill(metaObject, "createBy", String.class, BaseContextHandler.getUserID());
+        this.strictInsertFill(metaObject, "createBy", String.class, RpcContext.getContext().getAttachment(Constant.CONTEXT_KEY_USER_ID));
         this.strictInsertFill(metaObject, "createDate", LocalDateTime.class, LocalDateTime.now());
 //        this.setFieldValByName("createBy", BaseContextHandler.getUserID(), metaObject);
 //        this.setFieldValByName("createDate", DateUtil.format(new Date(), DatePattern.PURE_DATETIME_MS_PATTERN), metaObject);
@@ -27,7 +30,8 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     public void updateFill(MetaObject metaObject) {
 //        this.setFieldValByName("updateBy", BaseContextHandler.getUserID(), metaObject);
 //        this.setFieldValByName("updateDate", DateUtil.format(new Date(), DatePattern.PURE_DATETIME_MS_PATTERN), metaObject);
-        this.strictUpdateFill(metaObject, "updateBy", String.class, BaseContextHandler.getUserID());
+//        this.strictUpdateFill(metaObject, "updateBy", String.class, BaseContextHandler.getUserID());
+        this.strictUpdateFill(metaObject, "updateBy", String.class, RpcContext.getContext().getAttachment(Constant.CONTEXT_KEY_USER_ID));
         this.strictUpdateFill(metaObject, "updateDate", LocalDateTime.class, LocalDateTime.now());
     }
 }

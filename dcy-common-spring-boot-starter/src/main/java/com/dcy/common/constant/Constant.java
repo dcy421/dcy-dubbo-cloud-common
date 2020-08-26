@@ -18,7 +18,10 @@ public interface Constant {
 
     String BEARER_TYPE = "Bearer ";
 
-
+    /**
+     * 公共父级id
+     */
+    String DEFAULT_PARENT_VAL = "0";
     // auth-server 常量
     String SIGNING_KEY = "dcy!#$&*(!FGE";
     String CONTEXT_KEY_USER_ID = "currentUserId";

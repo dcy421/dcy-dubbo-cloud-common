@@ -5,6 +5,7 @@ import com.dcy.common.constant.Constant;
 import com.dcy.common.context.BaseContextHandler;
 import com.dcy.common.model.OperationalLog;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.rpc.RpcContext;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
@@ -60,9 +61,12 @@ public class WebLogAspect {
         String userId = request.getHeader(Constant.CONTEXT_KEY_USER_ID);
         String username = request.getHeader(Constant.CONTEXT_KEY_USERNAME);
         String requestURI = request.getRequestURI();
-        BaseContextHandler.setUserID(userId);
+        // 当前线程id
+        /*BaseContextHandler.setUserID(userId);
         BaseContextHandler.setUsername(username);
-        BaseContextHandler.setCurrentURL(requestURI);
+        BaseContextHandler.setCurrentURL(requestURI);*/
+        // Dubbo 隐式参数
+        RpcContext.getContext().setAttachment(Constant.CONTEXT_KEY_USER_ID, userId);
         operationalLog.setUrl(requestURI);
         operationalLog.setOperName(username);
         operationalLog.setMethod(joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
